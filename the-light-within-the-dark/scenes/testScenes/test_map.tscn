@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://y5dr0mrt3cpq"]
+[gd_scene load_steps=4 format=3 uid="uid://y5dr0mrt3cpq"]
 
+[ext_resource type="Shader" uid="uid://dsm8l2cm87exa" path="res://scripts/shaders/new_shader.tres" id="1_cqvns"]
 [ext_resource type="Texture2D" uid="uid://b7oqa70bs8s58" path="res://assets/icon.svg" id="1_w56fm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gel5x"]
+shader = ExtResource("1_cqvns")
 
 [node name="test map" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(71, 72)
+material = SubResource("ShaderMaterial_gel5x")
+position = Vector2(223, 120)
 texture = ExtResource("1_w56fm")
