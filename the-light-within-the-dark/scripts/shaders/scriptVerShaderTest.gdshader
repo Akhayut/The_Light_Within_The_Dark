@@ -3,7 +3,7 @@ shader_type canvas_item;
 void vertex() {
 	// Called for every vertex the material is visible on.
 	if (VERTEX.y < 0.0){
-		VERTEX += vec2(sin(TIME * 20.0) * 50.0, 0);
+		VERTEX += vec2(sin(TIME * 10.0) * 50.0, 0);
 	}
 }
 
