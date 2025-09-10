@@ -10,20 +10,27 @@ shader = ExtResource("1_gel5x")
 shader_parameter/aspect = 0.0
 shader_parameter/mousePos = Vector2(0, 0)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tlda0"]
+shader = ExtResource("1_cqvns")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gel5x"]
 shader = ExtResource("1_gel5x")
 shader_parameter/aspect = 0.0
 shader_parameter/mousePos = Vector2(0, 0)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tlda0"]
-shader = ExtResource("1_cqvns")
-
 [node name="test map" type="Node2D"]
 material = SubResource("ShaderMaterial_3402l")
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_tlda0")
+position = Vector2(115, 65)
+scale = Vector2(0.390625, 0.304688)
+texture = ExtResource("1_w56fm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 material = SubResource("ShaderMaterial_gel5x")
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,11 +38,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 script = ExtResource("2_3402l")
-
-[node name="Icon" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_tlda0")
-position = Vector2(115, 65)
-scale = Vector2(0.390625, 0.304688)
-texture = ExtResource("1_w56fm")

@@ -22,7 +22,7 @@ default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]
 op_type = 0
 
 [sub_resource type="VisualShaderNodeIf" id="VisualShaderNodeIf_3qsrj"]
-default_input_values = [0, 0.0, 1, 0.3, 2, 1e-05, 3, Vector3(1, 0, 0), 4, Vector3(1, 0, 0), 5, Vector3(0, 0, 0)]
+default_input_values = [0, 0.3, 1, 0.3, 2, 1e-05, 3, Vector3(1, 0, 0), 4, Vector3(0, 0, 0), 5, Vector3(1, 0, 0)]
 
 [sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_mgiqm"]
 parameter_name = "aspect"
@@ -78,16 +78,16 @@ void fragment() {
 
 	vec3 n_out5p0;
 // If:5
-	float n_in5p1 = 0.30000;
+	float n_in5p0 = 0.30000;
 	float n_in5p2 = 0.00001;
 	vec3 n_in5p3 = vec3(1.00000, 0.00000, 0.00000);
-	vec3 n_in5p4 = vec3(1.00000, 0.00000, 0.00000);
-	vec3 n_in5p5 = vec3(0.00000, 0.00000, 0.00000);
-	if(abs(n_out4p0 - n_in5p1) < n_in5p2)
+	vec3 n_in5p4 = vec3(0.00000, 0.00000, 0.00000);
+	vec3 n_in5p5 = vec3(1.00000, 0.00000, 0.00000);
+	if(abs(n_in5p0 - n_out4p0) < n_in5p2)
 	{
 		n_out5p0 = n_in5p3;
 	}
-	else if(n_out4p0 < n_in5p1)
+	else if(n_in5p0 < n_out4p0)
 	{
 		n_out5p0 = n_in5p5;
 	}
@@ -103,7 +103,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-557.938, -132.054)
+graph_offset = Vector2(-72.4507, 55.4161)
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(1100, 60)
@@ -125,4 +125,4 @@ nodes/fragment/11/node = SubResource("VisualShaderNodeVectorCompose_3qsrj")
 nodes/fragment/11/position = Vector2(-220, 160)
 nodes/fragment/12/node = SubResource("VisualShaderNodeFloatOp_mgiqm")
 nodes/fragment/12/position = Vector2(-600, 220)
-nodes/fragment/connections = PackedInt32Array(2, 1, 9, 0, 8, 0, 9, 1, 9, 0, 10, 0, 2, 2, 10, 1, 12, 0, 11, 0, 3, 1, 12, 1, 8, 0, 12, 0, 3, 2, 11, 1, 5, 0, 0, 1, 4, 0, 5, 0, 10, 0, 4, 0, 11, 0, 4, 1)
+nodes/fragment/connections = PackedInt32Array(2, 1, 9, 0, 8, 0, 9, 1, 9, 0, 10, 0, 2, 2, 10, 1, 12, 0, 11, 0, 3, 1, 12, 1, 8, 0, 12, 0, 3, 2, 11, 1, 5, 0, 0, 1, 10, 0, 4, 0, 11, 0, 4, 1, 4, 0, 5, 1)

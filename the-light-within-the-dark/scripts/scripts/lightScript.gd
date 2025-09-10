@@ -1,5 +1,8 @@
 extends ColorRect
 
+func _ready() -> void:
+	visible = true
+
 func _process(_delta: float) -> void:
 	var vp = get_viewport()
 	var screen_size: Vector2 = Vector2(vp.get_visible_rect().size)
