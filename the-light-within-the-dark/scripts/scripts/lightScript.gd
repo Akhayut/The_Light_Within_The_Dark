@@ -1,7 +1,12 @@
 extends ColorRect
 
 func _process(_delta: float) -> void:
-	var screenSize = Vector2(get_viewport().size)
-	var mouse_uv = get_viewport().get_mouse_position() / screenSize
+	var vp = get_viewport()
+	var screen_size: Vector2 = Vector2(vp.get_visible_rect().size)
+
+	var mouse_screen: Vector2 = Vector2(vp.get_mouse_position())
+	var mouse_uv: Vector2 = mouse_screen / screen_size
+
 	material.set_shader_parameter("mousePos", mouse_uv)
-	material.set_shader_parameter("aspect", size.x / size.y)
+
+	material.set_shader_parameter("aspect", screen_size.x / screen_size.y)

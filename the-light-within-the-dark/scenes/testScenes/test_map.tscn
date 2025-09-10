@@ -36,5 +36,6 @@ script = ExtResource("2_3402l")
 
 [node name="Icon" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_tlda0")
-position = Vector2(489, 294)
+position = Vector2(115, 65)
+scale = Vector2(0.390625, 0.304688)
 texture = ExtResource("1_w56fm")
