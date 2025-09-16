@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://bprhxiyrb2abh"]
+
+[ext_resource type="Texture2D" uid="uid://cmk0ji2cvkxbx" path="res://assets/BangleBerry.png" id="1_8871n"]
+[ext_resource type="Script" uid="uid://dx68mjy2cbdtt" path="res://scripts/scripts/characters/bangle_berry.gd" id="1_r712b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hg3i"]
+atlas = ExtResource("1_8871n")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb1ab"]
+atlas = ExtResource("1_8871n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d36q"]
+atlas = ExtResource("1_8871n")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4x7p1"]
+atlas = ExtResource("1_8871n")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6b5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hg3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mb1ab")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d36q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4x7p1")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8871n"]
+size = Vector2(22, 33)
+
+[node name="bangleBerry" type="CharacterBody2D"]
+script = ExtResource("1_r712b")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r6b5t")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="collisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_8871n")
