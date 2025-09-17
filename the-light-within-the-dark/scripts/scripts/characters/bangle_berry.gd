@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 #var defineing
 var mousePos
-var moving = false
 @export var speed = 167
 
 
