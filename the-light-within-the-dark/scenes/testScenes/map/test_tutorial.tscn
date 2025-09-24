@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://3lbdy4pj54wt"]
+
+[ext_resource type="PackedScene" uid="uid://bprhxiyrb2abh" path="res://scenes/testScenes/character/bangleBerry.tscn" id="1_ksopi"]
+[ext_resource type="Shader" uid="uid://cdcv6y6ha7423" path="res://scripts/shaders/lightShader.tres" id="2_1dfl7"]
+[ext_resource type="Script" uid="uid://diwgrijnhwsup" path="res://scripts/scripts/maps/lightScript.gd" id="3_jx6w6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7xnvr"]
+shader = ExtResource("2_1dfl7")
+shader_parameter/aspect = 0.0
+shader_parameter/mousePos = Vector2(0, 0)
+
+[node name="testTutorial" type="Node2D"]
+
+[node name="shader" type="CanvasLayer" parent="."]
+
+[node name="shaderBox" type="ColorRect" parent="shader"]
+visible = false
+material = SubResource("ShaderMaterial_7xnvr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 0, 0)
+script = ExtResource("3_jx6w6")
+
+[node name="bangleBerry" parent="." instance=ExtResource("1_ksopi")]
+position = Vector2(275, 150)
+
+[node name="walls" type="Node" parent="."]

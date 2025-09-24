@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 #var defineing
 var mousePos
-@export var speed = 167
+@export var speed = 100
 
 
 func _process(_delta: float) -> void:
@@ -26,4 +26,5 @@ func _process(_delta: float) -> void:
 		velocity = (( mousePos - global_position) / distanceToMouse) * speed
 	else:
 		velocity = Vector2(0,0)
+		
 	move_and_slide()
