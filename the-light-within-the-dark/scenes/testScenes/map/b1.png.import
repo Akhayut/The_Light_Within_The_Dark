@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmk0ji2cvkxbx"
-path="res://.godot/imported/BangleBerry.png-d4ba99882ac263b0fff78c4afc8b0f2f.ctex"
+uid="uid://cbccmnn35tpnx"
+path="res://.godot/imported/b1.png-7394804fa9d7732bddf8e991e7ac9847.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BangleBerry.png"
-dest_files=["res://.godot/imported/BangleBerry.png-d4ba99882ac263b0fff78c4afc8b0f2f.ctex"]
+source_file="res://scenes/testScenes/map/b1.png"
+dest_files=["res://.godot/imported/b1.png-7394804fa9d7732bddf8e991e7ac9847.ctex"]
 
 [params]
 

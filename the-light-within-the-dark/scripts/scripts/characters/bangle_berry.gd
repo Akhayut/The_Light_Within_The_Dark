@@ -6,7 +6,7 @@ var mousePos
 
 
 func _process(_delta: float) -> void:
-	#defineing distance
+	#defining distance
 	mousePos = get_global_mouse_position()
 	var distanceToMouse = sqrt(((global_position.x - mousePos.x)**2.0) +((global_position.y - mousePos.y)**2.0))
 	

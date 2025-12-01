@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmk0ji2cvkxbx"
-path="res://.godot/imported/BangleBerry.png-d4ba99882ac263b0fff78c4afc8b0f2f.ctex"
+uid="uid://bvruy63b88w0a"
+path="res://.godot/imported/TLWTDcampfire.png-811d60bc378ba073252ee16a2b958a72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BangleBerry.png"
-dest_files=["res://.godot/imported/BangleBerry.png-d4ba99882ac263b0fff78c4afc8b0f2f.ctex"]
+source_file="res://assets/TLWTDcampfire.png"
+dest_files=["res://.godot/imported/TLWTDcampfire.png-811d60bc378ba073252ee16a2b958a72.ctex"]
 
 [params]
 
