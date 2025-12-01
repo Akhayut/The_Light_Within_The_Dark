@@ -10,15 +10,19 @@ func _process(_delta: float) -> void:
 	mousePos = get_global_mouse_position()
 	var distanceToMouse = sqrt(((global_position.x - mousePos.x)**2.0) +((global_position.y - mousePos.y)**2.0))
 	
-	#flipping sprite
-	if  mousePos.x - global_position.x > 2:
-		$sprite.flip_h = true
-	elif  mousePos.x - global_position.x < 2:
-		$sprite.flip_h = false
 	#animation
-	if abs(velocity.x) > 0.5 or abs(velocity.y) > 0.5:
-		$sprite.animation = "walk"
-	else:
+	if (abs(velocity.x) > 0.5) or (abs(velocity.x) > 0.5):
+		if abs(velocity.x)>abs(velocity.y):
+			if velocity.x>0:
+				$sprite.animation = "walkRight"
+			else:
+				$sprite.animation = "walkLeft"
+		else:
+			if velocity.y>0:
+				$sprite.animation = "walkDown"
+			else:
+				$sprite.animation = "walkUp"
+	elif abs(velocity.x) < 0.5 and abs(velocity.y) < 0.5:
 		$sprite.animation = "idle"
 	
 	#movement
