@@ -1,149 +1,166 @@
-[gd_scene load_steps=20 format=3 uid="uid://bprhxiyrb2abh"]
+[gd_scene load_steps=22 format=3 uid="uid://bprhxiyrb2abh"]
 
-[ext_resource type="Shader" uid="uid://cdcv6y6ha7423" path="res://scripts/shaders/lightShader.tres" id="1_rq6rx"]
-[ext_resource type="Script" path="res://scripts/scripts/maps/test maps/test_map.gd" id="2_b35ea"]
-[ext_resource type="Texture2D" uid="uid://cbccmnn35tpnx" path="res://scenes/testScenes/map/b1.png" id="3_7enkw"]
-[ext_resource type="Texture2D" uid="uid://b0ifdes17luox" path="res://scenes/testScenes/map/b2.png" id="4_2xks7"]
-[ext_resource type="Script" uid="uid://diwgrijnhwsup" path="res://scripts/scripts/maps/lightScript.gd" id="5_qqifd"]
-[ext_resource type="PackedScene" uid="uid://bprhxiyrb2abh" path="res://scenes/testScenes/character/bangleBerry.tscn" id="6_7raoi"]
+[ext_resource type="Script" uid="uid://dx68mjy2cbdtt" path="res://scripts/scripts/characters/bangle_berry.gd" id="1_r712b"]
+[ext_resource type="Texture2D" uid="uid://myfli8ymseh2" path="res://assets/TLWTDmc.png" id="3_v65gy"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3402l"]
-shader = ExtResource("1_rq6rx")
-shader_parameter/aspect = 0.0
-shader_parameter/mousePos = Vector2(0, 0)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6k00a"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gel5x"]
-shader = ExtResource("1_rq6rx")
-shader_parameter/aspect = 0.0
-shader_parameter/mousePos = Vector2(0, 0)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq6rx"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ov5kr"]
-size = Vector2(104, 12)
+[sub_resource type="AtlasTexture" id="AtlasTexture_b35ea"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lh3fa"]
-size = Vector2(59, 11)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7enkw"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5bbk"]
-size = Vector2(38.5, 8.5)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xks7"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaykk"]
-size = Vector2(65, 85.125)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqifd"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(0, 128, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhk64"]
-size = Vector2(244, 21)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7raoi"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(64, 128, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6mwb"]
-size = Vector2(5, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_imld8"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(128, 128, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkc62"]
-size = Vector2(32, 12)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej1mm"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(192, 128, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bbnb"]
-size = Vector2(32, 10)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wr81"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(0, 192, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uh1y4"]
-size = Vector2(31, 36)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpmkh"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(64, 192, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjksw"]
-size = Vector2(25, 60)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jduac"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(128, 192, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_powqp"]
-size = Vector2(33, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qlya"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(192, 192, 64, 64)
 
-[node name="test map" type="Node2D"]
-material = SubResource("ShaderMaterial_3402l")
-script = ExtResource("2_b35ea")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayuto"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(0, 64, 64, 64)
 
-[node name="playerCam" type="Camera2D" parent="."]
-anchor_mode = 0
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntdpc"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(64, 64, 64, 64)
 
-[node name="tutorialBackround1" type="Sprite2D" parent="."]
-position = Vector2(160, 90)
-texture = ExtResource("3_7enkw")
-vframes = 2
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf4it"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(128, 64, 64, 64)
 
-[node name="tutorialBackround2" type="Sprite2D" parent="."]
-position = Vector2(-159, 89)
-texture = ExtResource("4_2xks7")
-vframes = 2
+[sub_resource type="AtlasTexture" id="AtlasTexture_vghx6"]
+atlas = ExtResource("3_v65gy")
+region = Rect2(192, 64, 64, 64)
 
-[node name="bangleBerry" parent="." instance=ExtResource("6_7raoi")]
-position = Vector2(90, 58)
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6b5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6k00a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rq6rx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b35ea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7enkw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xks7")
+}],
+"loop": true,
+"name": &"walkDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqifd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7raoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imld8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ej1mm")
+}],
+"loop": true,
+"name": &"walkLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wr81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpmkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jduac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qlya")
+}],
+"loop": true,
+"name": &"walkRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayuto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntdpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf4it")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vghx6")
+}],
+"loop": true,
+"name": &"walkUp",
+"speed": 5.0
+}]
 
-[node name="shader" type="CanvasLayer" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8871n"]
+size = Vector2(22, 33)
 
-[node name="shaderBox" type="ColorRect" parent="shader"]
-visible = false
-material = SubResource("ShaderMaterial_gel5x")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-color = Color(0, 0, 0, 0)
-script = ExtResource("5_qqifd")
+[node name="bangleBerry" type="CharacterBody2D"]
+script = ExtResource("1_r712b")
 
-[node name="permanentWallsWithCollision" type="StaticBody2D" parent="."]
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r6b5t")
+animation = &"idle"
+autoplay = "idle"
 
-[node name="shelfCollsion1" type="CollisionShape2D" parent="permanentWallsWithCollision"]
-position = Vector2(-57, 90)
-shape = SubResource("RectangleShape2D_ov5kr")
-
-[node name="shelfCollision2" type="CollisionShape2D" parent="permanentWallsWithCollision"]
-position = Vector2(-171.5, 89.5)
-shape = SubResource("RectangleShape2D_lh3fa")
-
-[node name="shelfCollision3" type="CollisionShape2D" parent="permanentWallsWithCollision"]
-position = Vector2(-254.25, 89.25)
-shape = SubResource("RectangleShape2D_r5bbk")
-
-[node name="rubbleCollision1" type="CollisionShape2D" parent="permanentWallsWithCollision"]
-position = Vector2(-275.5, 136.563)
-shape = SubResource("RectangleShape2D_oaykk")
-
-[node name="wallCollisionRooms1&2" type="CollisionPolygon2D" parent="permanentWallsWithCollision"]
-build_mode = 1
-polygon = PackedVector2Array(4, 143, 3, 15, 316, 15, 316, 143, 321, 143, 320, 0, -320, 0, -319, 182, 320, 182, 320, 178, 27, 181, -316, 176, -314, 3, -3, 3, -3, 143)
-
-[node name="shelfCollision4" type="CollisionShape2D" parent="permanentWallsWithCollision"]
-position = Vector2(-191, 35.5)
-shape = SubResource("RectangleShape2D_xhk64")
-
-[node name="invisibleWall1" type="CollisionShape2D" parent="permanentWallsWithCollision"]
-position = Vector2(-200.5, 67)
-shape = SubResource("RectangleShape2D_l6mwb")
-
-[node name="shelfEnterable1" type="StaticBody2D" parent="."]
-
-[node name="shelfEnterableCollision1" type="CollisionShape2D" parent="shelfEnterable1"]
-position = Vector2(-125, 90)
-shape = SubResource("RectangleShape2D_kkc62")
-
-[node name="shelfEnterableCollision2" type="CollisionShape2D" parent="shelfEnterable1"]
-position = Vector2(-218, 89)
-shape = SubResource("RectangleShape2D_7bbnb")
-
-[node name="bigDieAreas" type="Area2D" parent="."]
-
-[node name="bigDiePit" type="CollisionShape2D" parent="bigDieAreas"]
-position = Vector2(-218.5, 65)
-shape = SubResource("RectangleShape2D_uh1y4")
-debug_color = Color(0.996078, 0, 0, 0.419608)
-
-[node name="ladder1Area" type="Area2D" parent="."]
-position = Vector2(-125, 90)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ladder1Area"]
-position = Vector2(-104.5, 55)
-shape = SubResource("RectangleShape2D_bjksw")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 161)
-shape = SubResource("RectangleShape2D_powqp")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="collisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_8871n")
