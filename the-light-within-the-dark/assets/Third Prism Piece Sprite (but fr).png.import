@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv3ohh8pwenk0"
-path="res://.godot/imported/Third Prism Piece Sprite (but fr).png-abe2744531258499bb318321ea04b572.ctex"
+path="res://.godot/imported/Third Prism Piece Sprite (but fr).png-ca60c41b538f289289b142ac848124c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/testScenes/map/Third Prism Piece Sprite (but fr).png"
-dest_files=["res://.godot/imported/Third Prism Piece Sprite (but fr).png-abe2744531258499bb318321ea04b572.ctex"]
+source_file="res://assets/Third Prism Piece Sprite (but fr).png"
+dest_files=["res://.godot/imported/Third Prism Piece Sprite (but fr).png-ca60c41b538f289289b142ac848124c7.ctex"]
 
 [params]
 

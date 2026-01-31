@@ -1,10 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://y5dr0mrt3cpq"]
+[gd_scene load_steps=25 format=3 uid="uid://y5dr0mrt3cpq"]
 
 [ext_resource type="Shader" uid="uid://cdcv6y6ha7423" path="res://scripts/shaders/lightShader.tres" id="1_gel5x"]
 [ext_resource type="Script" uid="uid://diwgrijnhwsup" path="res://scripts/scripts/maps/lightScript.gd" id="2_3402l"]
 [ext_resource type="Texture2D" uid="uid://cbccmnn35tpnx" path="res://scenes/testScenes/map/b1.png" id="2_h0snl"]
 [ext_resource type="PackedScene" uid="uid://bprhxiyrb2abh" path="res://scenes/testScenes/character/bangleBerry.tscn" id="2_usc7c"]
 [ext_resource type="Texture2D" uid="uid://b0ifdes17luox" path="res://scenes/testScenes/map/b2.png" id="3_kkc62"]
+[ext_resource type="Texture2D" uid="uid://dxsn6yqj0j77a" path="res://scenes/testScenes/map/b3.png" id="4_7bbnb"]
+[ext_resource type="Texture2D" uid="uid://cox87c41lcfwr" path="res://scenes/testScenes/map/b4V1.png" id="5_xhk64"]
+[ext_resource type="Texture2D" uid="uid://dgqgdt0c7d2mt" path="res://scenes/testScenes/map/table1ZoomIn.png" id="6_l6mwb"]
+[ext_resource type="Texture2D" uid="uid://d1rtq1mpsl6m3" path="res://assets/Prism Piece One Sprite.png" id="9_uh1y4"]
+[ext_resource type="Texture2D" uid="uid://c31i6707yle5n" path="res://assets/Second Prism Piece Sprite.png" id="10_powqp"]
+[ext_resource type="Texture2D" uid="uid://cxkyy0unw17y7" path="res://assets/Third Prism Piece Sprite.png" id="11_6fiwy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3402l"]
 shader = ExtResource("1_gel5x")
@@ -60,6 +66,20 @@ vframes = 2
 position = Vector2(-159, 89)
 texture = ExtResource("3_kkc62")
 vframes = 2
+
+[node name="B3" type="Sprite2D" parent="."]
+position = Vector2(480, 90)
+texture = ExtResource("4_7bbnb")
+vframes = 2
+
+[node name="B4v1" type="Sprite2D" parent="."]
+position = Vector2(480, -90)
+texture = ExtResource("5_xhk64")
+vframes = 2
+
+[node name="Table1ZoomIn" type="Sprite2D" parent="."]
+position = Vector2(160, -90)
+texture = ExtResource("6_l6mwb")
 
 [node name="bangleBerry" parent="." instance=ExtResource("2_usc7c")]
 position = Vector2(90, 58)
@@ -144,3 +164,27 @@ offset_top = 36.0
 offset_right = 185.0
 offset_bottom = 56.0
 color = Color(0.46807, 2.52686e-06, 0.300209, 1)
+
+[node name="prismPieceOne" type="Node2D" parent="."]
+position = Vector2(152, -34)
+
+[node name="prism1" type="Sprite2D" parent="prismPieceOne"]
+position = Vector2(43, -37)
+scale = Vector2(5, 5)
+texture = ExtResource("9_uh1y4")
+
+[node name="prismPieceTwo" type="Node2D" parent="."]
+position = Vector2(197, -46)
+
+[node name="prism2" type="Sprite2D" parent="prismPieceTwo"]
+position = Vector2(-1, -25)
+scale = Vector2(5, 5)
+texture = ExtResource("10_powqp")
+
+[node name="prismPiece3" type="Node2D" parent="."]
+position = Vector2(258, -138)
+
+[node name="prism3" type="Sprite2D" parent="prismPiece3"]
+position = Vector2(-52, 82)
+scale = Vector2(5, 5)
+texture = ExtResource("11_6fiwy")
