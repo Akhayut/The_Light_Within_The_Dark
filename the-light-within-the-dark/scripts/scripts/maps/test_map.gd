@@ -1,7 +1,10 @@
 extends Node2D
 
-var room2Pos = Vector2(-320, 0)
+var room2pos = Vector2(-320, 0)
 var room1pos = Vector2(0,0)
+var room3pos = Vector2(320, 0)
+var room4pos = Vector2(320,-180)
+var tableRoom = Vector2(0,-180)
 
 var currentRoom = 1
 var readyToMove
@@ -40,7 +43,7 @@ func _on_camera_colider_body_entered(body: Node2D) -> void:
 		print("hello")
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-		tween.tween_property($playerCam, "position", room2Pos, 0.5)
+		tween.tween_property($playerCam, "position", room2pos, 0.5)
 		warp_mouse_to_player($bangleBerry)
 		await get_tree().create_timer(2).timeout
 		currentRoom = 2
@@ -53,3 +56,46 @@ func _on_camera_colider_body_entered(body: Node2D) -> void:
 		warp_mouse_to_player($bangleBerry)
 		await get_tree().create_timer(2).timeout
 		currentRoom = 1
+
+
+
+func _on_camera_collider_2_body_entered(body):
+	if currentRoom == 1:
+		Input.warp_mouse(Vector2(200,-150))
+		print("hello")
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		tween.tween_property($playerCam, "position", room3pos, 0.5)
+		warp_mouse_to_player($bangleBerry)
+		await get_tree().create_timer(2).timeout
+		currentRoom = 3
+	else:		
+		Input.warp_mouse(Vector2(0,0))
+		print("hi")
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		tween.tween_property($playerCam, "position", room1pos, 0.5)
+		warp_mouse_to_player($bangleBerry)
+		await get_tree().create_timer(2).timeout
+		currentRoom = 1
+
+
+func _on_camera_collider_3_body_entered(body):
+	if currentRoom == 3:
+		Input.warp_mouse(Vector2(200,-150))
+		print("hello")
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		tween.tween_property($playerCam, "position", room4pos, 0.5)
+		warp_mouse_to_player($bangleBerry)
+		await get_tree().create_timer(2).timeout
+		currentRoom = 4
+	else:		
+		Input.warp_mouse(Vector2(0,0))
+		print("hi")
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		tween.tween_property($playerCam, "position", room3pos, 0.5)
+		warp_mouse_to_player($bangleBerry)
+		await get_tree().create_timer(2).timeout
+		currentRoom = 3
