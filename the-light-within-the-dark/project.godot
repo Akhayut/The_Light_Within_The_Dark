@@ -12,7 +12,7 @@ config_version=5
 
 config/name="The Light Within The Dark"
 run/main_scene="uid://y5dr0mrt3cpq"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
 [display]
