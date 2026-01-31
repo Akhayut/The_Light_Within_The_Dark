@@ -1,6 +1,10 @@
 extends Node2D
 
 var room2Pos = Vector2(-320, 0)
+var room1pos = Vector2(0,0)
+
+var currentRoom = 1
+var readyToMove
 
 func _ready():
 	# Hides the cursor and prevents it from leaving the game window (for camera controls)
@@ -31,9 +35,21 @@ func warp_mouse_to_player(player: Node2D):
 
 
 func _on_camera_colider_body_entered(body: Node2D) -> void:
-	Input.warp_mouse(Vector2(200,-150))
-	print("hello")
-	var tween = create_tween()
-	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	tween.tween_property($playerCam, "position", room2Pos, 0.5)
-	warp_mouse_to_player($bangleBerry)
+	if currentRoom == 1:
+		Input.warp_mouse(Vector2(200,-150))
+		print("hello")
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		tween.tween_property($playerCam, "position", room2Pos, 0.5)
+		warp_mouse_to_player($bangleBerry)
+		await get_tree().create_timer(2).timeout
+		currentRoom = 2
+	else:		
+		Input.warp_mouse(Vector2(0,0))
+		print("hi")
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		tween.tween_property($playerCam, "position", room1pos, 0.5)
+		warp_mouse_to_player($bangleBerry)
+		await get_tree().create_timer(2).timeout
+		currentRoom = 1
