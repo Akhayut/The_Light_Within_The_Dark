@@ -7,7 +7,6 @@ var rotationSpeed = .1
 var direction = Vector2.ZERO
 var start = 1
 func _process(delta):
-	print("damn it")
 #	if(start == 1):
 #			obj1.rotate(1.67)
 #			obj3.rotate(.3)
