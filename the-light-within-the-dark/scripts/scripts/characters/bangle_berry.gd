@@ -31,4 +31,5 @@ func _process(_delta: float) -> void:
 	else:
 		velocity = Vector2(0,0)
 		
-	move_and_slide()
+	if !Global.inPuzzle:
+		move_and_slide()

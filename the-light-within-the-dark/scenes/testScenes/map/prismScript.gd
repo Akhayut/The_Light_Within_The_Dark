@@ -6,6 +6,8 @@ extends Node2D
 var rotationSpeed = .1
 var direction = Vector2.ZERO
 var start = 1
+
+
 func _process(delta):
 #	if(start == 1):
 #			obj1.rotate(1.67)

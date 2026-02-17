@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://y5dr0mrt3cpq"]
+[gd_scene load_steps=31 format=3 uid="uid://y5dr0mrt3cpq"]
 
 [ext_resource type="Shader" uid="uid://cdcv6y6ha7423" path="res://scripts/shaders/lightShader.tres" id="1_gel5x"]
 [ext_resource type="Script" uid="uid://diwgrijnhwsup" path="res://scripts/scripts/maps/lightScript.gd" id="2_3402l"]
@@ -59,16 +59,14 @@ size = Vector2(31, 36)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjksw"]
 size = Vector2(25, 60)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_usc7c"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_powqp"]
-size = Vector2(20, 30.75)
+size = Vector2(2.5, 30.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6fiwy"]
-size = Vector2(20, 68)
+size = Vector2(1, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0u7x3"]
-size = Vector2(42, 46.25)
+size = Vector2(42, 3)
 
 [sub_resource type="LabelSettings" id="LabelSettings_xhk64"]
 
@@ -186,19 +184,6 @@ position = Vector2(-125, 90)
 position = Vector2(-104.5, 55)
 shape = SubResource("RectangleShape2D_bjksw")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(175, 46)
-shape = SubResource("RectangleShape2D_usc7c")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-offset_left = 165.0
-offset_top = 36.0
-offset_right = 185.0
-offset_bottom = 56.0
-color = Color(0.46807, 2.52686e-06, 0.300209, 1)
-
 [node name="prismPieceOne" type="CharacterBody2D" parent="."]
 position = Vector2(253, -103)
 
@@ -232,20 +217,20 @@ collision_mask = 14
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="camera colider"]
-position = Vector2(1, 159)
+position = Vector2(0, 159)
 shape = SubResource("RectangleShape2D_powqp")
 
 [node name="camera collider 2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="camera collider 2"]
-position = Vector2(331, 144)
+position = Vector2(320, 146)
 shape = SubResource("RectangleShape2D_6fiwy")
 
 [node name="camera collider 3" type="Area2D" parent="."]
 position = Vector2(331, 144)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="camera collider 3"]
-position = Vector2(148, -142.125)
+position = Vector2(148, -144.5)
 shape = SubResource("RectangleShape2D_0u7x3")
 
 [node name="playerCam" type="Camera2D" parent="."]
