@@ -45,7 +45,7 @@ size = Vector2(5, 32)
 size = Vector2(37, 37.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6yrvl"]
-size = Vector2(3.0942025, 11.087036)
+size = Vector2(3.0942, 11.087)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkc62"]
 size = Vector2(32, 12)
@@ -134,7 +134,7 @@ shape = SubResource("RectangleShape2D_oaykk")
 
 [node name="wallCollisionRooms1&2" type="CollisionPolygon2D" parent="permanentWallsWithCollision"]
 build_mode = 1
-polygon = PackedVector2Array(4, 143, 3, 15, 316, 15, 316, 143, 320, 108, 320, 0, 277.06833, 0, -320, 0, -319, 182, 320, 182, 320, 178, -316, 176, -314, 3, -3, 3, -3, 143)
+polygon = PackedVector2Array(4, 143, 3, 15, 316, 15, 316, 143, 320, 108, 320, 0, 277.068, 0, -320, 0, -319, 182, 320, 182, 320, 178, -316, 176, -314, 3, -3, 3, -3, 143)
 
 [node name="shelfCollision4" type="CollisionShape2D" parent="permanentWallsWithCollision"]
 position = Vector2(-191, 35.5)
@@ -153,7 +153,7 @@ collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="permanentWallsWithCollision/prismPuzzleArea"]
 position = Vector2(564, -82)
-scale = Vector2(17.775152, 4.690162)
+scale = Vector2(17.7752, 4.69016)
 shape = SubResource("RectangleShape2D_6yrvl")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="permanentWallsWithCollision"]
